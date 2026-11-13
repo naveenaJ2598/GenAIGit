@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Knowledge Builder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <h1>Knowledge Builder</h1>
+
+    <form action="/knowledge_builder" method="POST">
+
+        <label>Topic Name</label><br>
+        <input type="text" name="topic_name" required><br><br>
+
+        <label>Category</label><br>
+        <input type="text" name="category" required><br><br>
+
+        <label>Difficulty</label><br>
+
+        <select name="difficulty">
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+        </select>
+
+        <br><br>
+
+        <label>Status</label><br>
+
+        <select name="status">
+            <option>Not Started</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Add Topic
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/command_center">
+        Back
+    </a>
+
+</body>
+
+</html>
